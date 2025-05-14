@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mon Site Next.js
 
-## Getting Started
+Ce projet est un site web moderne construit avec [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com) et préparé pour être déployé sur [Vercel](https://vercel.com).
 
-First, run the development server:
+## Fonctionnalités
+
+- 🚀 **Performance optimale** - Construit avec Next.js pour des performances et un temps de chargement rapides
+- 🎨 **Design moderne** - Interface utilisateur élégante et réactive grâce à Tailwind CSS
+- 🌙 **Mode sombre** - Support complet du mode clair et sombre
+- 📱 **Responsive** - Compatible avec tous les appareils, des téléphones aux ordinateurs de bureau
+- 🔄 **Déploiement facile** - Prêt à être déployé sur Vercel en quelques clics
+
+## Démarrage rapide
+
+Pour commencer à travailler sur ce projet, suivez ces étapes :
 
 ```bash
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:3000](http://localhost:3000) avec votre navigateur pour voir le résultat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure du projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── public/             # Fichiers statiques (images, etc.)
+├── src/
+│   ├── app/            # Pages de l'application
+│   ├── components/     # Composants réutilisables
+│   └── styles/         # Styles globaux
+├── tailwind.config.ts  # Configuration de Tailwind CSS
+└── next.config.ts      # Configuration de Next.js
+```
 
-## Learn More
+## Personnalisation
 
-To learn more about Next.js, take a look at the following resources:
+Vous pouvez commencer à personnaliser votre site en modifiant les fichiers dans le dossier `src/app`. Le projet utilise [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) pour charger et optimiser automatiquement la police [Geist](https://vercel.com/font).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Déploiement sur Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le moyen le plus simple de déployer votre application Next.js est d'utiliser la [plateforme Vercel](https://vercel.com/new).
 
-## Deploy on Vercel
+Pour déployer, il vous suffit de :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Pousser votre code sur GitHub
+2. Importer votre dépôt dans Vercel
+3. Vercel détectera automatiquement Next.js et appliquera les paramètres optimaux
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Consultez la [documentation de déploiement Next.js](https://nextjs.org/docs/app/building-your-application/deploying) pour plus de détails.
+
+## Licence
+
+Ce projet est sous licence MIT.
