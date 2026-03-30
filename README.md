@@ -1,42 +1,58 @@
 ## Template Next.js Bleeze
 
-Une base Next.js prête à l'emploi pour les collaborateurs Bleeze.
+Template de démarrage officielle pour les projets web Bleeze. Elle fournit une base préconfigurée et standardisée afin que chaque nouveau site ou application démarre avec la même stack, les mêmes conventions et une bibliothèque de composants UI complète — prête à coder sans configuration supplémentaire.
 
-### Aperçu
-- **Architecture**: Next.js (App Router) + TypeScript + Tailwind CSS
-- **UI**: Shadcn (blocs déjà installés). Recommandé: Shadcnblocks
-- **Qualité**: ESLint en mode strict (ordre des imports, imports/vars inutiles interdits)
+### Pourquoi cette template ?
+
+Chaque projet Bleeze partage un socle technique commun. Plutôt que de recréer la configuration à chaque fois, cette template centralise :
+- Une **stack moderne** : Next.js 16 (App Router, Turbopack), React 19, TypeScript strict et Tailwind CSS 4
+- Une **bibliothèque UI complète** : 45+ composants Shadcn/Radix pré-installés (boutons, modales, formulaires, graphiques, etc.)
+- Des **règles de qualité** : ESLint strict avec tri automatique des imports et interdiction des variables inutilisées
+- Des **utilitaires courants** : animations (Motion), graphiques (Recharts), emails (Resend), thème clair/sombre (next-themes)
 
 ### Démarrage rapide
+
 ```bash
 npm install
 npm run dev
 ```
 
-### Linting (mode strict)
-- **Vérifier**: `npm run lint`
-- **Auto-corriger**: `npm run lint:fix`
-- Règles clés: `sort-imports` (ordre des imports) et `@typescript-eslint/no-unused-vars` (aucun import/var inutile)
-
-### Shadcn / Shadcnblocks
-- Les composants Shadcn sont déjà ajoutés sous `src/components/ui`.
-- Pour utiliser Shadcnblocks avec une **clé API premium**, veuillez la demander au superviseur Bleeze.
+Le serveur de développement se lance avec Turbopack sur `http://localhost:3000`.
 
 ### Scripts
-- `dev`: lance le serveur de dev Next.js
-- `build`: build de production
-- `start`: démarre le serveur en production
-- `lint`: vérifie les règles ESLint
-- `lint:fix`: corrige automatiquement les problèmes simples
 
-### Structure
-- `src/app`: routes et layout (App Router)
-- `src/components`: composants applicatifs et UI (Shadcn)
-- `src/lib`: utilitaires
-- `src/hooks`: hooks réutilisables
+| Commande | Description |
+|---|---|
+| `npm run dev` | Serveur de développement (Turbopack) |
+| `npm run build` | Build de production |
+| `npm run start` | Démarre le serveur en production |
+| `npm run lint` | Vérifie les règles ESLint |
+| `npm run lint:fix` | Corrige automatiquement les problèmes détectés |
 
-### Notes
-- Cette page d'accueil explique brièvement la template au premier lancement.
-- Merci de respecter les conventions ESLint et de privilégier Shadcn pour la cohérence UI.
+### Structure du projet
 
+```
+src/
+├── app/            # Routes, layouts et pages (App Router)
+├── components/
+│   └── ui/         # 45+ composants Shadcn pré-installés
+├── hooks/          # Hooks réutilisables (ex : use-mobile)
+└── lib/            # Utilitaires (cn(), helpers)
+```
 
+### Shadcn / Shadcnblocks
+
+- Les composants Shadcn sont déjà ajoutés sous `src/components/ui` — il suffit de les importer.
+- Pour utiliser **Shadcnblocks** (blocs prêts à l'emploi plus avancés) avec une clé API premium, veuillez la demander au superviseur Bleeze.
+
+### Linting (mode strict)
+
+- **Vérifier** : `npm run lint`
+- **Auto-corriger** : `npm run lint:fix`
+- Règles clés : `simple-import-sort` (ordre des imports) et `@typescript-eslint/no-unused-vars` (aucun import/variable inutile)
+
+### Conventions
+
+- Respecter les conventions ESLint et privilégier les composants Shadcn pour la cohérence UI
+- Utiliser les Server Components par défaut ; marquer un composant Client uniquement si nécessaire
+- Organiser le code par domaine/feature dans `src/`
